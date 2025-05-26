@@ -11,7 +11,10 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps { checkout scm }
+            steps {
+				deleteDir()
+				checkout scm 
+				}
         }
 
         /* stage('Install deps') {
