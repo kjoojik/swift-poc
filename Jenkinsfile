@@ -2,8 +2,8 @@ pipeline {
     /* 1. Agent w kontenerze z Pythonem */
     agent {
         docker {
-            image 'python:3.12-slim'
-            args  '-u 0:0'           // aby mieć uprawnienia do zapisu artefaktów
+			image 'python:3.12-slim'
+			args  '-u 0:0 -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
 
@@ -50,10 +50,10 @@ pipeline {
         success {
             echo 'Wszystkie skrypty zakończone sukcesem'
         }
-        failure {
+        /*failure {
             mail to: 'dev-team@example.com',
                  subject: "${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
                  body: "Sprawdź logi: ${env.BUILD_URL}"
-        }
+        }*/
     }
 }
