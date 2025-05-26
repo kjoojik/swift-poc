@@ -50,10 +50,11 @@ pipeline {
         success {
             echo 'Wszystkie skrypty zakończone sukcesem'
         }
-        /*failure {
-            mail to: 'dev-team@example.com',
+        failure {
+           /*  mail to: 'dev-team@example.com',
                  subject: "${env.JOB_NAME} #${env.BUILD_NUMBER} FAILED",
-                 body: "Sprawdź logi: ${env.BUILD_URL}"
-        }*/
+                 body: "Sprawdź logi: ${env.BUILD_URL}" */
+			echo 'Wyjebalo sie'
+        }
     }
 }
