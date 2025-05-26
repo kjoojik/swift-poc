@@ -22,11 +22,11 @@ pipeline {
         /* 2. Kolejne skrypty – sekwencyjnie */
         stage('Run scripts') {
             steps {
-                sh 'python script1.py'
-                sh 'python script2.py'
-                sh 'python script3.py'
-                sh 'python script4.py'
-                sh 'python script5.py'
+                sh 'python skrypt_1.py'
+                sh 'python skrypt_2.py'
+                sh 'python skrypt_3.py'
+                sh 'python skrypt_4.py'
+                sh 'python skrypt_5.py'
             }
         }
 
