@@ -23,7 +23,7 @@ pipeline {
         }
 
         2. Kolejne skrypty – sekwencyjnie */
-        stage('Run scripts') {
+        stage('BLA BLA BLA') {
             steps {
                 sh 'python skrypt_1.py success'
                 sh 'python skrypt_2.py success'
