@@ -25,9 +25,9 @@ pipeline {
         2. Kolejne skrypty – sekwencyjnie */
         stage('Run scripts') {
             steps {
-                sh 'python skrypt_1.py'
-                sh 'python skrypt_2.py'
-                sh 'python skrypt_3.py'
+                sh 'python skrypt_1.py success'
+                sh 'python skrypt_2.py success'
+                sh 'python skrypt_3.py fail'
                 sh 'python skrypt_4.py'
                 sh 'python skrypt_5.py'
             }
