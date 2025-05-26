@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
 				deleteDir()
-				checkout scm 
+				git url: 'https://github.com/kjoojik/swift-poc', branch: 'main'
 				}
         }
 
