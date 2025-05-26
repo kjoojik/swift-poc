@@ -14,12 +14,12 @@ pipeline {
             steps { checkout scm }
         }
 
-        stage('Install deps') {
+        /* stage('Install deps') {
             when { fileExists 'requirements.txt' }
             steps { sh 'pip install -r requirements.txt' }
         }
 
-        /* 2. Kolejne skrypty – sekwencyjnie */
+        2. Kolejne skrypty – sekwencyjnie */
         stage('Run scripts') {
             steps {
                 sh 'python skrypt_1.py'
